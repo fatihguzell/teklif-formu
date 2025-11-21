@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Nexa';
-    src: url('NexaLight.woff2') format('woff2'),
-        url('NexaLight.woff') format('woff');
+    src: url('../fonts/NexaLight.woff2') format('woff2'),
+        url('../fonts/NexaLight.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -9,8 +9,8 @@
 
 @font-face {
     font-family: 'Nexa';
-    src: url('Nexa-Bold.woff2') format('woff2'),
-        url('Nexa-Bold.woff') format('woff');
+    src: url('../fonts/Nexa-Bold.woff2') format('woff2'),
+        url('../fonts/Nexa-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -18,8 +18,8 @@
 
 @font-face {
     font-family: 'Nexa XBold';
-    src: url('Nexa-XBold.woff2') format('woff2'),
-        url('Nexa-XBold.woff') format('woff');
+    src: url('../fonts/Nexa-XBold.woff2') format('woff2'),
+        url('../fonts/Nexa-XBold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
