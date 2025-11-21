@@ -1,0 +1,508 @@
+@font-face {
+    font-family: 'Nexa';
+    src: url('NexaLight.woff2') format('woff2'),
+        url('NexaLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nexa';
+    src: url('Nexa-Bold.woff2') format('woff2'),
+        url('Nexa-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nexa XBold';
+    src: url('Nexa-XBold.woff2') format('woff2'),
+        url('Nexa-XBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+/* ==========================================
+   GENEL STİLLER
+========================================== */
+
+/* Text ve Number inputlar */
+input[type="text"],
+input[type="number"] {
+    font-family: Nexa Bold;
+    font-size: 15px;
+    color: #4d4d4d;
+    text-align: center;
+}
+
+/* Placeholder stilleri */
+::placeholder {
+    font-family: Nexa Bold;
+    font-size: 15px;
+    color: #4d4d4d;
+    text-align: center;
+}
+
+/* Sayfa genel stili */
+body {
+    background-color: #e6e6e6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ==========================================
+   ÜST BAR
+========================================== */
+#ust-bar {
+    background-color: red;
+    width: 800px;
+    height: 50px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    color: white;
+    width: 80%;
+    font-family: Nexa Bold;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+#ana-baslik {
+    color: white;
+    width: 20%;
+    font-family: Nexa ;
+    font-size: 15px;
+}
+
+/* ==========================================
+   SÜTUN BAŞLIKLARI
+========================================== */
+#sutunlar {
+    background-color: #cccccc;
+    width: 800px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.sutun {
+    font-family: Nexa Bold;
+    font-size: 15px;
+    color: #4d4d4d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#no { width: 2.5%; }
+#urun-adi { width: 30%; justify-content: left; padding-left: 5px; }
+#adet { width: 10%; }
+#cinsi { width: 5%; }
+#liste-fiyat { width: 15%; }
+#iskonto { width: 7.5%; }
+#net-fiyat, #satir-tutari {
+    width: 15%;
+    height: 50px;
+    background-color: #b3b3b3;
+}
+
+/* ==========================================
+   DOLDURMA ALANLARI
+========================================== */
+
+#sutunlar-x {
+    background-color: #f5f5f4;
+    width: 800px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid white;
+}
+
+.sutun-x {
+    font-family: Nexa Bold;
+    font-size: 15px;
+    color: #44403b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#no-x { width: 2.5%; }
+#urun-adi-x { width: 30%; padding-left: 5px; }
+#adet-x { width: 10%; }
+#cinsi-x { width: 5%; }
+#liste-fiyat-x { width: 15%; }
+#iskonto-x { width: 7.5%; }
+#net-fiyat-x, #satir-tutari-x {
+    width: 15%;
+    color: #1a1a1a;
+}
+.form-kutucuk {
+    width: 100%;
+    height: 35px;
+    background-color: #f5f5f4;
+    border: none;
+}
+.form-cins {
+    font-size: 15px;
+    font-family: Nexa Bold;
+    color: #44403b;
+    width: 100%;
+    background-color: #f5f5f4;
+    border: none;
+}
+#net-fiyat-input, #satir-tutari-input {
+    background-color: #e0e0e0;
+    cursor: not-allowed;
+    height: 48px;
+}
+#urun-adi-input {
+    text-align: left;
+}
+
+/* ==========================================
+   TOPLAM ALANI
+========================================== */
+#toplama-alani {
+    width: 800px;
+    height: 50px;
+    background-color: red;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    align-items: center;
+}
+
+#toplam-bosluk { 
+    width: 70%; height: 50px;
+}
+
+#toplam-yazi {
+    width: 15%;
+    color: white;
+    font-family: Nexa;
+    font-size: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#toplam-sonuc {
+    width: 15%;
+    color: white;
+    font-family: Nexa Xbold;
+    font-size: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ==========================================
+   BUTONLAR
+========================================== */
+#butonlar {
+    width: 800px;
+    height: 50px;
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#kisayollar {
+    width: 37.5%;
+    height: 50px;
+    background-color: #cccccc;
+    border-radius: 10px;
+    color: #4d4d4d;
+    font-family: Nexa Bold;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Kısayol popup özel stilleri */
+#kisayol-popup-icerik {
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+    background-color: #e6e6e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#kisayol-gorsel {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+}
+
+/* .popup ve .bulanik-overlay zaten mevcut */
+/* Satır Ekle / Sil Butonları */
+#satir-ekle, #satir-sil {
+    background-color: #4d4d4d;
+    width: 15%;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-family: Nexa Bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+#full-sil {
+    background-color: #4d4d4d;
+    width: 31%;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-family: Nexa Bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+#satir-ekle:hover, #satir-sil:hover, #full-sil:hover { background-color: #b3b3b3; }
+#satir-ekle:active, #satir-sil:active, #full-sil:active { transform: scale(0.95); }
+
+/* ==========================================
+   KDV BLOĞU
+========================================== */
+#kdv {
+    width: 30%;
+    height: 50px;
+    background-color: red;
+    border-radius: 10px;
+    display: flex;
+}
+
+#kdv-yazi, #kdv-secim, #kdv-sonuc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Nexa Bold;
+    font-size: 15px;
+    color: white;
+}
+
+#kdv-yazi { width: 25%; }
+#kdv-secim { width: 25%; }
+#kdv-sonuc { width: 50%; }
+
+#kdv-orani {
+    width: 100%;
+    height: 50px;
+    background-color: red;
+    border: none;
+    color: white;
+    font-family: Nexa Xbold;
+}
+
+/* ==========================================
+   ÇIKTI ALANI VE POPUP
+========================================== */
+#cikti-alani {
+    width: 800px;
+    height: 50px;
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#cikti-al-buton {
+    width: 30%;
+    height: 50px;
+    background-color: #f5f5f4;
+    color: red;
+    font-family: Nexa Bold;
+    font-size: 15px;
+    border-radius: 10px;
+    border: 0px;
+    z-index: 401;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+#cikti-al-buton:hover { background-color: red; color: white; }
+#cikti-al-buton:active { transform: scale(0.95); transition: transform 0.1s ease; }
+
+#fiyat-listeleri {
+    width: 37.5%;
+    height: 50px;
+    background-color: #cccccc;
+    border-radius: 10px;
+    color: #4d4d4d;
+    font-family: Nexa Bold;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(4px);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+.popup-icerik {
+    background: #e6e6e6;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+.popup-icerik button {
+    width: 90%;
+    height: 50px;
+    margin-top: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    font-size: 15px;
+    font-family: Nexa Bold;
+    color: #4d4d4d;
+}
+#popup-kapat {
+    width: 90%;
+    margin: 10px 0px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    font-size: 15px;
+    font-family: Nexa Bold;
+    color: white;
+    background-color: #b3b3b3;
+}
+#popup-yazi {
+    font-family: Nexa Bold;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px;
+}
+#popup-baslik {
+    background-color: red;
+    width: 100%;
+    height: 75px;
+    border-radius: 10px 10px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ==========================================
+   ANİMASYONLAR
+========================================== */
+.dynamic-row {
+    transition: all 0.3s ease;
+}
+
+.dynamic-row.adding {
+    transform: translateY(-20px);
+    opacity: 0;
+}
+
+/* Satır dolu uyarısı */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-5px); }
+    40% { transform: translateX(5px); }
+    60% { transform: translateX(-5px); }
+    80% { transform: translateX(5px); }
+    100% { transform: translateX(0); }
+}
+.satir-dolu { animation: shake 0.3s ease; background-color: #ffcccc; }
+
+/* Boş satır silme animasyonu */
+@keyframes fadeOutUp {
+    0% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-20px); }
+}
+.silinen-satir { animation: fadeOutUp 0.3s forwards; }
+
+/* Ortak bulanık overlay */
+.bulanik-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(4px);
+    display: none;
+    z-index: 400;
+}
+
+/* Seçilen satırdaki numaranın X'e dönüşmesi için stil */
+.satir-sil-x {
+    color: red !important;
+    border-radius: 10px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer !important;
+    transition: 0.2s;
+    font-family: Nexa Bold;
+    font-size: 15px;
+}
+/* Sağa kayarak yok olma animasyonu */
+@keyframes saga-kayarak-sil {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(120px);
+    }
+}
+
+/* Animasyon sınıfı */
+.saga-kayarak-yok-ol {
+    animation: saga-kayarak-sil 0.35s ease forwards;
+}
+/* SATIR EKLEME ANİMASYONU */
+.satir-eklendi {
+    animation: satirEkleAnim 0.35s ease;
+}
+
+@keyframes satirEkleAnim {
+    0% {
+        opacity: 0;
+        transform: translateY(15px) scale(0.98);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* SATIR SİLME ANİMASYONU */
+.satir-sil-anim {
+    animation: satirSilAnim 0.35s ease forwards;
+}
+
+@keyframes satirSilAnim {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+}

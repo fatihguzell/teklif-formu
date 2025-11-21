@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Fiyat Teklif Formu | karakoyspot">
+    <meta name="author" content="karakoyspot">
+    <title>Fiyat Teklif Formu | karakoyspot</title>
+
+    <!-- CSS Dosyası -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Kütüphaneler -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+    <!-- Ortak Bulanıklaştırma (Hover ve Popup için) -->
+    <div id="sayfa-blur" class="bulanik-overlay"></div>
+
+    <!-- Üst Bar -->
+    <div id="ust-bar">
+        <div id="logo">karakoyspot</div>
+        <div id="ana-baslik">Fiyat Teklif Formu</div>
+    </div>
+
+    <!-- Sütun Başlıkları -->
+    <div id="sutunlar">
+        <div class="sutun" id="no"></div>
+        <div class="sutun" id="urun-adi">Ürün Adı</div>
+        <div class="sutun" id="adet">Adet</div>
+        <div class="sutun" id="cinsi">Cinsi</div>
+        <div class="sutun" id="liste-fiyat">Liste Fiyatı</div>
+        <div class="sutun" id="iskonto">İskonto</div>
+        <div class="sutun" id="net-fiyat">Net Fiyat</div>
+        <div class="sutun" id="satir-tutari">Satır Tutarı</div>
+    </div>
+
+    <!-- İlk Satır (Kopyalanacak Dinamik Satır) -->
+    <div id="sutunlar-x">
+        <div class="sutun-x" id="no-x" style="color: red;">1</div>
+
+        <div class="sutun-x" id="urun-adi-x">
+            <input class="form-kutucuk" type="text" id="urun-adi-input" required>
+        </div>
+
+        <div class="sutun-x" id="adet-x">
+            <input class="form-kutucuk" type="number" placeholder="0" required>
+        </div>
+
+        <div class="sutun-x" id="cinsi-x">
+            <select class="form-cins" required>
+                <option value="adet">Ad.</option>
+                <option value="metre">Mt.</option>
+            </select>
+        </div>
+
+        <div class="sutun-x" id="liste-fiyat-x">
+            <input class="form-kutucuk" type="number" placeholder="0,00" min="0" step="0.01" required>
+        </div>
+
+        <div class="sutun-x" id="iskonto-x">
+            <input class="form-kutucuk" type="number" placeholder="0%" min="0" max="100" step="1">
+        </div>
+
+        <div class="sutun-x" id="net-fiyat-x">
+            <input class="form-kutucuk" id="net-fiyat-input" type="text" placeholder="0,00" readonly>
+        </div>
+
+        <div class="sutun-x" id="satir-tutari-x">
+            <input class="form-kutucuk" id="satir-tutari-input" type="text" placeholder="0,00" readonly>
+        </div>
+    </div>
+
+    <!-- Toplam Alanı -->
+    <div id="toplama-alani">
+        <div id="toplam-bosluk"></div>
+        <div id="toplam-yazi">Toplam</div>
+        <div id="toplam-sonuc">0,00</div>
+    </div>
+
+    <!-- İşlem Butonları ve KDV -->
+    <div id="butonlar">
+        <div id="kisayollar">Kısayollar
+            <!-- Kısayollar Popup -->
+<div id="kisayol-popup" class="popup">
+    <div class="popup-icerik" id="kisayol-popup-icerik">
+        <img src="./kisayollar.png" alt="Kısayollar" id="kisayol-gorsel">
+    </div>
+</div>
+        </div>
+
+        <button type="button" id="satir-sil">- Satır Sil</button>
+        <button type="button" id="satir-ekle">+ Satır Ekle</button>
+
+        <div id="kdv">
+            <div id="kdv-yazi">KDV</div>
+            <div id="kdv-secim">
+                <select id="kdv-orani" required>
+                    <option value="20">%20</option>
+                    <option value="10">%10</option>
+                    <option value="1">%1</option>
+                </select>
+            </div>
+            <div id="kdv-sonuc">0,00</div>
+        </div>
+    </div>
+
+    <!-- Çıktı Alma ve Boş Satır Sil -->
+    <div id="cikti-alani">
+        <div id="fiyat-listeleri">Fiyat Listeleri (yakında)</div>
+        <button id="full-sil">Boş Satırları Sil</button>
+        <button id="cikti-al-buton">Çıktı Al</button>
+
+        <!-- Popup -->
+        <div id="cikti-popup" class="popup">
+            <div class="popup-icerik">
+                <div id="popup-baslik"><h2 id="popup-yazi">Hangi formatta çıktı almak istersiniz?</h2></div>
+                <button class="cikti-secim" data-type="image">Görsel</button>
+                <button class="cikti-secim" data-type="excel">Excel</button>
+                <button class="cikti-secim" data-type="pdf">PDF</button>
+                <button id="popup-kapat">Kapat</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS Dosyası -->
+    <script src="script.js"></script>
+    
+</body>
+</html>
