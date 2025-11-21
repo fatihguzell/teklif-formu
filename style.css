@@ -8,7 +8,7 @@
 }
 
 @font-face {
-    font-family: 'Nexa';
+    font-family: 'Nexa Bold';
     src: url('../fonts/Nexa-Bold.woff2') format('woff2'),
         url('../fonts/Nexa-Bold.woff') format('woff');
     font-weight: bold;
@@ -17,7 +17,7 @@
 }
 
 @font-face {
-    font-family: 'Nexa XBold';
+    font-family: 'Nexa Xbold';
     src: url('../fonts/Nexa-XBold.woff2') format('woff2'),
         url('../fonts/Nexa-XBold.woff') format('woff');
     font-weight: bold;
